@@ -1,0 +1,1 @@
+﻿Contains "framework-ish" fuctionality not specific to the API or the database.

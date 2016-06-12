@@ -1,0 +1,1 @@
+﻿Inegtration tests for the classes in the DataSqlServer;  these are used to test data access against the actual database.

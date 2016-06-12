@@ -1,0 +1,1 @@
+﻿Contains functionality common to web & service applications.

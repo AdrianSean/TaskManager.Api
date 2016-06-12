@@ -1,0 +1,1 @@
+﻿Integration ("smoke") tests for the REST service.
