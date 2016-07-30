@@ -1,7 +1,7 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Web.Api.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Web.Api.App_Start.NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Web.Api.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Web.Api.NinjectWebCommon), "Stop")]
 
-namespace Web.Api.App_Start
+namespace Web.Api
 {
     using System;
     using System.Web;
@@ -10,7 +10,8 @@ namespace Web.Api.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-
+    using Common;
+    using System.Web.Http;
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -22,7 +23,16 @@ namespace Web.Api.App_Start
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
-            bootstrapper.Initialize(CreateKernel);
+
+            IKernel container = null;
+            bootstrapper.Initialize(() =>
+            {
+                container = CreateKernel();
+                return container;
+            });
+
+            var resolver = new NinjectDependancyResolver(container);
+            GlobalConfiguration.Configuration.DependencyResolver = resolver;
         }
         
         /// <summary>
@@ -61,6 +71,8 @@ namespace Web.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            var containerConfigurator = new NinjectConfigurator();
+            containerConfigurator.Configure(kernel);
         }        
     }
 }

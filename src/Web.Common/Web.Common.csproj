@@ -84,7 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTimeAdapter.cs" />
+    <Compile Include="IDateTime.cs" />
+    <Compile Include="Logging\ILogManager.cs" />
+    <Compile Include="Logging\LogManagerAdapter.cs" />
     <Compile Include="NamespaceHttpControllerSelector.cs" />
+    <Compile Include="NinjectDependancyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\ApiVersion1RoutePrefixAttribute.cs" />
     <Compile Include="Routing\ApiVersionConstraint.cs" />
