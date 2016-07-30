@@ -1,0 +1,15 @@
+﻿using Data.Entities;
+
+namespace Data.SqlServer.Mapping
+{
+    public class UserMap : VersionClassMap<User>
+    {
+        public UserMap()
+        {
+            Id(x => x.UserId);
+            Map(x => x.Firstname).Not.Nullable();
+            Map(x => x.Lastname).Not.Nullable();
+            Map(x => x.Username).Not.Nullable();
+        }
+    }
+}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Data.Entities
 {
-    public class Task
+    public class Task : IVersionEntity
     {
         private readonly IList<User> _users = new List<User>();
 

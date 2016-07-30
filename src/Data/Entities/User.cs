@@ -1,6 +1,6 @@
 ﻿namespace Data.Entities
 {
-    public class User
+    public class User : IVersionEntity
     {
 
         public virtual  long UserId { get; set; }

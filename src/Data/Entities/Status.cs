@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Entities
 {
-    public class Status
+    public class Status : IVersionEntity
     {
         public virtual long StatusId { get; set; }
         public virtual string Name { get; set; }
