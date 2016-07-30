@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using System.Web.Http.Dispatcher;
+using System.Web.Http.Routing;
+using Web.Common;
+using Web.Common.Routing;
 
 namespace Web.Api
 {
@@ -11,14 +12,13 @@ namespace Web.Api
         {
             // Web API configuration and services
 
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+            var constraintsResolver = new DefaultInlineConstraintResolver();
+            constraintsResolver.ConstraintMap.Add("apiVersionConstraint", typeof(ApiVersionConstraint));
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            // Web API routes
+            config.MapHttpAttributeRoutes(constraintsResolver);
+
+            config.Services.Replace(typeof(IHttpControllerSelector), new NamespaceHttpControllerSelector(config));            
         }
     }
 }
