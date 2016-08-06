@@ -1,0 +1,1032 @@
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=;
+Operator=;
+Category=System.Web.Http.Request
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=http://localhost:50001/api/v1/tasks
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=SelectController;
+Operator=NamespaceHttpControllerSelector;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=SelectController;
+Operator=NamespaceHttpControllerSelector;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=TasksController
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=CreateController;
+Operator=HttpControllerDescriptor;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Create;
+Operator=DefaultHttpControllerActivator;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Create;
+Operator=DefaultHttpControllerActivator;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Web.Api.Controllers.V1.TasksController
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=CreateController;
+Operator=HttpControllerDescriptor;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Web.Api.Controllers.V1.TasksController
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteAsync;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=SelectAction;
+Operator=ApiControllerActionSelector;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=SelectAction;
+Operator=ApiControllerActionSelector;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Selected action 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpActionBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpRequestParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Binding parameter 'requestMessage'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpRequestParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Parameter 'requestMessage' bound to the value 'Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=FormatterParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Binding parameter 'newTask'
+RequestId=00000000-0000-0000-0000-000000000000;
+Kind=Begin;
+Status=0;
+Operation=ReadFromStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=
+Message=Type='Task', content-type='text/json'
+RequestId=00000000-0000-0000-0000-000000000000;
+Kind=End;
+Status=0;
+Operation=ReadFromStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=
+Message=Value read='Web.Api.Models.Task'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=FormatterParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Parameter 'newTask' bound to the value 'Web.Api.Models.Task'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpActionBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Model state is valid. Values: requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=OnActionExecutingAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action filter for 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=OnActionExecutingAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=InvokeActionAsync;
+Operator=ApiControllerActionInvoker;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action='AddTask(requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task)'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteAsync;
+Operator=ReflectedHttpActionDescriptor;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Invoking action 'AddTask(requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task)'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteAsync;
+Operator=ReflectedHttpActionDescriptor;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action returned 'Web.Api.Models.Task'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Negotiate;
+Operator=DefaultContentNegotiator;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Type='Task', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=GetPerRequestFormatterInstance;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Task', mediaType='text/json; charset=utf-8'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=GetPerRequestFormatterInstance;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Will use same 'JsonMediaTypeFormatter' formatter
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Negotiate;
+Operator=DefaultContentNegotiator;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Selected formatter='JsonMediaTypeFormatter', content-type='text/json; charset=utf-8'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=InvokeActionAsync;
+Operator=ApiControllerActionInvoker;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=OK;
+Operation=OnActionExecutedAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action filter for 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=OnActionExecutedAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=ExecuteAsync;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=;
+Operator=;
+Category=System.Web.Http.Request
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Content-type='text/json; charset=utf-8', content-length=unknown
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=WriteToStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Value='Web.Api.Models.Task', type='Task', content-type='text/json; charset=utf-8'
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=WriteToStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Dispose;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000021-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Dispose;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=;
+Operator=;
+Category=System.Web.Http.Request
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=http://localhost:50001/api/v1/tasks
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=SelectController;
+Operator=NamespaceHttpControllerSelector;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Route='MS_SubRoutes:System.Web.Http.Routing.IHttpRouteData[]'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=SelectController;
+Operator=NamespaceHttpControllerSelector;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=TasksController
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=CreateController;
+Operator=HttpControllerDescriptor;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Create;
+Operator=DefaultHttpControllerActivator;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Create;
+Operator=DefaultHttpControllerActivator;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Web.Api.Controllers.V1.TasksController
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=CreateController;
+Operator=HttpControllerDescriptor;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Web.Api.Controllers.V1.TasksController
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteAsync;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=SelectAction;
+Operator=ApiControllerActionSelector;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=SelectAction;
+Operator=ApiControllerActionSelector;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Selected action 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpActionBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpRequestParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Binding parameter 'requestMessage'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpRequestParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Parameter 'requestMessage' bound to the value 'Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=FormatterParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Binding parameter 'newTask'
+RequestId=00000000-0000-0000-0000-000000000000;
+Kind=Begin;
+Status=0;
+Operation=ReadFromStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=
+Message=Type='Task', content-type='text/json'
+RequestId=00000000-0000-0000-0000-000000000000;
+Kind=End;
+Status=0;
+Operation=ReadFromStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=
+Message=Value read='Web.Api.Models.Task'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=FormatterParameterBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Parameter 'newTask' bound to the value 'Web.Api.Models.Task'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteBindingAsync;
+Operator=HttpActionBinding;
+Category=System.Web.Http.ModelBinding
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Model state is valid. Values: requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=OnActionExecutingAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action filter for 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=OnActionExecutingAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=InvokeActionAsync;
+Operator=ApiControllerActionInvoker;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action='AddTask(requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task)'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=ExecuteAsync;
+Operator=ReflectedHttpActionDescriptor;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Invoking action 'AddTask(requestMessage=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}, newTask=Web.Api.Models.Task)'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=ExecuteAsync;
+Operator=ReflectedHttpActionDescriptor;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action returned 'Web.Api.Models.Task'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Negotiate;
+Operator=DefaultContentNegotiator;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Type='Task', formatters=[JsonMediaTypeFormatterTracer, XmlMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer, FormUrlEncodedMediaTypeFormatterTracer]
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=GetPerRequestFormatterInstance;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Obtaining formatter of type 'JsonMediaTypeFormatter' for type='Task', mediaType='text/json; charset=utf-8'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=GetPerRequestFormatterInstance;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Will use same 'JsonMediaTypeFormatter' formatter
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Negotiate;
+Operator=DefaultContentNegotiator;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Selected formatter='JsonMediaTypeFormatter', content-type='text/json; charset=utf-8'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=InvokeActionAsync;
+Operator=ApiControllerActionInvoker;
+Category=System.Web.Http.Action
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=OK;
+Operation=OnActionExecutedAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Action filter for 'AddTask(HttpRequestMessage requestMessage, Task newTask)'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=OnActionExecutedAsync;
+Operator=UnitOfWorkActionFilterAttribute;
+Category=System.Web.Http.Filters
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=ExecuteAsync;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=OK;
+Operation=;
+Operator=;
+Category=System.Web.Http.Request
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Content-type='text/json; charset=utf-8', content-length=unknown
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=WriteToStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=Value='Web.Api.Models.Task', type='Task', content-type='text/json; charset=utf-8'
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=WriteToStreamAsync;
+Operator=JsonMediaTypeFormatter;
+Category=System.Net.Http.Formatting
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=Begin;
+Status=0;
+Operation=Dispose;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
+RequestId=80000022-0002-f200-b63f-84710c7967bb;
+Kind=End;
+Status=0;
+Operation=Dispose;
+Operator=TasksController;
+Category=System.Web.Http.Controllers
+Request=Method: POST, RequestUri: 'http://localhost:50001/api/v1/tasks', Version: 1.1, Content: System.Web.Http.WebHost.HttpControllerHandler+LazyStreamContent, Headers:
+{
+  Host: localhost:50001
+  User-Agent: Fiddler
+  Content-Length: 18
+  Content-Type: text/json
+}
+Message=
