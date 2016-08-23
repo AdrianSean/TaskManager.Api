@@ -87,6 +87,8 @@
   <ItemGroup>
     <Compile Include="ActionTransactionHelper.cs" />
     <Compile Include="DateTimeAdapter.cs" />
+    <Compile Include="ErrorHandling\GlobalExceptionHandler.cs" />
+    <Compile Include="ErrorHandling\SimpleErrorResult.cs" />
     <Compile Include="IActionTransactionHelper.cs" />
     <Compile Include="IDateTime.cs" />
     <Compile Include="Logging\ILogManager.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Routing\ApiVersion1RoutePrefixAttribute.cs" />
     <Compile Include="Routing\ApiVersionConstraint.cs" />
+    <Compile Include="SimpleExceptionLogger.cs" />
     <Compile Include="SimpleTraceListener.cs" />
     <Compile Include="UnitOfWorkActionFilterAttribute.cs" />
     <Compile Include="WebContainerManager.cs" />
