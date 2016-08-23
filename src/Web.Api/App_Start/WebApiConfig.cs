@@ -27,7 +27,9 @@ namespace Web.Api
             //config.EnableSystemDiagnosticsTracing();
             config.Services.Replace(typeof(ITraceWriter), new SimpleTraceWriter(WebContainerManager.Get<ILogManager>()));
 
-            config.Services.Add(typeof(IExceptionHandler), new SimpleExceptionLogger(WebContainerManager.Get<ILogManager>()));  
+            config.Services.Add(typeof(IExceptionHandler), new SimpleExceptionLogger(WebContainerManager.Get<ILogManager>()));
+
+            config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionHandler()); 
         }
     }
 }
