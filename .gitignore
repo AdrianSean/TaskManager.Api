@@ -3,3 +3,4 @@
 **/obj
 **/*.user
 **/.suo
+/src/BookDb/BookDb.dbmdl
