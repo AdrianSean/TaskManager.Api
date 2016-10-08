@@ -4,3 +4,4 @@
 **/*.user
 **/.suo
 /src/BookDb/BookDb.dbmdl
+*.jfm

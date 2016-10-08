@@ -56,6 +56,7 @@
     <Compile Include="Mapping\UserMap.cs" />
     <Compile Include="Mapping\VersionClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryProcessors\AddTaskQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ReadMe.txt" />
@@ -75,6 +76,10 @@
     <ProjectReference Include="..\Web.Api.Models\Web.Api.Models.csproj">
       <Project>{DD6C0C20-A029-4087-BD7B-1E710759EF0E}</Project>
       <Name>Web.Api.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.Common\Web.Common.csproj">
+      <Project>{8EC6F83E-2810-4439-8543-E99AE9F857AD}</Project>
+      <Name>Web.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
