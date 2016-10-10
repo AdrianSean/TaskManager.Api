@@ -19,6 +19,7 @@ using Data.Entities.QueryProcessors;
 using Common.TypeMapping;
 using Web.Api.AutoMappingConfiguration;
 using Web.Api.MaintenanceProcessing;
+using Data.SqlServer.QueryProcessors;
 
 namespace Web.Api
 {
@@ -36,7 +37,7 @@ namespace Web.Api
             ConfigureNHibernate(container);
             ConfigureAutoMapper(container);
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
-            container.Bind<IAddTaskQueryProcessor>().To<IAddTaskQueryProcessor>().InRequestScope();
+            container.Bind<IAddTaskQueryProcessor>().To<AddTaskQueryProcessor>().InRequestScope();
             container.Bind<IAddTaskMaintenanceProcessor>().To<AddTaskMaintenanceProcessor>().InRequestScope();
         }
 

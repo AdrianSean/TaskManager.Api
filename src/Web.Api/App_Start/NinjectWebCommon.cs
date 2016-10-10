@@ -1,20 +1,24 @@
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Web.Api.NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Web.Api.NinjectWebCommon), "Stop")]
+using System;
+using System.Web;
+
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+using Ninject;
+using Ninject.Web.Common;
+using System.Web.Http;
+using Web.Common;
+using WebActivatorEx;
+using Web.Api;
+
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
+[assembly: ApplicationShutdownMethod(typeof(NinjectWebCommon), "Stop")]
 
 namespace Web.Api
 {
-    using System;
-    using System.Web;
-
-    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
-    using Ninject;
-    using Ninject.Web.Common;
-    using Common;
-    using System.Web.Http;
+   
     public static class NinjectWebCommon 
     {
-        private static readonly Bootstrapper bootstrapper = new Bootstrapper();
+        private static readonly Bootstrapper Bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
@@ -25,14 +29,14 @@ namespace Web.Api
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
 
             IKernel container = null;
-            bootstrapper.Initialize(() =>
+            Bootstrapper.Initialize(() =>
             {
                 container = CreateKernel();
                 return container;
             });
 
             var resolver = new NinjectDependancyResolver(container);
-            GlobalConfiguration.Configuration.DependencyResolver = resolver;
+            GlobalConfiguration.Configuration.DependencyResolver = resolver;  
         }
         
         /// <summary>
@@ -40,7 +44,7 @@ namespace Web.Api
         /// </summary>
         public static void Stop()
         {
-            bootstrapper.ShutDown();
+            Bootstrapper.ShutDown();
         }
         
         /// <summary>
