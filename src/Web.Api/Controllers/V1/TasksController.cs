@@ -23,6 +23,7 @@ namespace Web.Api.Controllers.V1
         public Task AddTask(HttpRequestMessage requestMessage, NewTask newTask)
         {
             var task = _addTaskMaintenanceProcessor.AddTask(newTask);
+            var result = new TaskCreatedActionResult(task, requestMessage);
             return task;
         }        
     }

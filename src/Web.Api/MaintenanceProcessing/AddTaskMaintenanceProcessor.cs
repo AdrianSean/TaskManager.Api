@@ -1,7 +1,9 @@
 ﻿using Common.TypeMapping;
 using Data.Entities.QueryProcessors;
 using System;
+using System.Net.Http;
 using Web.Api.Models;
+using Web.Common;
 
 namespace Web.Api.MaintenanceProcessing
 {
@@ -24,6 +26,13 @@ namespace Web.Api.MaintenanceProcessing
             var taskEntity = _autoMapper.Map<Data.Entities.Task>(newTask);
             _queryProcessor.AddTask(taskEntity);
             var task = _autoMapper.Map<Task>(taskEntity);
+
+            task.AddLink(new Link {
+                Method = HttpMethod.Get.Method,
+                Href = "http://localhost:61589/api/v1/tasks/" + task.TaskId,
+                Rel = Constants.CommonLinkRelValues.Self
+            });
+            
             return task;
         }
     }

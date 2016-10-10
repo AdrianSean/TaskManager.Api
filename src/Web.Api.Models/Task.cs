@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Web.Api.Models
 {
-    public class Task
+    public class Task : ILinkContaining
     {
 
         private List<Link> _links;
