@@ -2,6 +2,7 @@
 **/bin
 **/obj
 **/*.user
-**/.suo
+.suo
 /src/BookDb/BookDb.dbmdl
 *.jfm
+*.log
