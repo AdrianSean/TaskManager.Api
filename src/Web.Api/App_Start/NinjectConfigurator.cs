@@ -20,6 +20,7 @@ using Common.TypeMapping;
 using Web.Api.AutoMappingConfiguration;
 using Web.Api.MaintenanceProcessing;
 using Data.SqlServer.QueryProcessors;
+using Web.Api.Security;
 
 namespace Web.Api
 {
@@ -39,6 +40,7 @@ namespace Web.Api
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IAddTaskQueryProcessor>().To<AddTaskQueryProcessor>().InRequestScope();
             container.Bind<IAddTaskMaintenanceProcessor>().To<AddTaskMaintenanceProcessor>().InRequestScope();
+            container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
         }
 
         private void ConfigureLog4net(IKernel container)

@@ -20,6 +20,7 @@ namespace Web.Api.Controllers.V1
 
         [Route("", Name ="AddTaskRoute")]
         [HttpPost]
+        [Authorize(Roles = Constants.RoleNames.Manager)]
         public Task AddTask(HttpRequestMessage requestMessage, NewTask newTask)
         {
             var task = _addTaskMaintenanceProcessor.AddTask(newTask);
