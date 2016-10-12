@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionTransactionHelper.cs" />
+    <Compile Include="BusinessRuleViolationException.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DateTimeAdapter.cs" />
     <Compile Include="ErrorHandling\GlobalExceptionHandler.cs" />

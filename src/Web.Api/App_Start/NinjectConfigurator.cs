@@ -21,6 +21,7 @@ using Web.Api.AutoMappingConfiguration;
 using Web.Api.MaintenanceProcessing;
 using Data.SqlServer.QueryProcessors;
 using Web.Api.Security;
+using Data.QueryProcessors;
 
 namespace Web.Api
 {
@@ -41,6 +42,9 @@ namespace Web.Api
             container.Bind<IAddTaskQueryProcessor>().To<AddTaskQueryProcessor>().InRequestScope();
             container.Bind<IAddTaskMaintenanceProcessor>().To<AddTaskMaintenanceProcessor>().InRequestScope();
             container.Bind<IBasicSecurityService>().To<BasicSecurityService>().InSingletonScope();
+            container.Bind<ITaskByIdQueryProcessor>().To<TaskByIdQueryProcessor>().InRequestScope();
+            container.Bind<IUpdateTaskStatusQueryProcessor>().To<UpdateTaskStatusQueryProcessor>().InRequestScope();
+            container.Bind<IStartTaskWorkflowProcessor>().To<StartTaskWorkflowProcessor>().InRequestScope();
         }
 
         private void ConfigureLog4net(IKernel container)

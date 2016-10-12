@@ -41,7 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\IVersionEntity.cs" />
-    <Compile Include="Entities\QueryProcessors\IAddTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IAddTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IStartTaskWorkflowProcessor.cs" />
+    <Compile Include="QueryProcessors\ITaskByIdQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\IUpdateTaskStatusQueryProcessor.cs" />
     <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\Task.cs" />
     <Compile Include="Entities\User.cs" />
@@ -54,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Api.Models\Web.Api.Models.csproj">
+      <Project>{DD6C0C20-A029-4087-BD7B-1E710759EF0E}</Project>
+      <Name>Web.Api.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
