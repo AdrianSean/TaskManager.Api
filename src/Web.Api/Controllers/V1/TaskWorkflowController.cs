@@ -3,6 +3,7 @@ using System.Web.Http;
 using Web.Api.Models;
 using Web.Common;
 using Web.Common.Routing;
+using Web.Common.Security;
 
 namespace Web.Api.Controllers.V1
 {
@@ -43,6 +44,7 @@ namespace Web.Api.Controllers.V1
 
 
         [HttpPost]
+        [UserAudit]
         [Route("tasks/{taskId:long}/reactivations", Name = "ReactivateTaskRoute")]
         public Task ReactivateTask(long taskId)
         {

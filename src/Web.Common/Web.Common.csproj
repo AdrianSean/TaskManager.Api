@@ -101,6 +101,7 @@
     <Compile Include="Routing\ApiVersion1RoutePrefixAttribute.cs" />
     <Compile Include="Routing\ApiVersionConstraint.cs" />
     <Compile Include="Security\IWebUserSession.cs" />
+    <Compile Include="Security\UserAuditAttribute.cs" />
     <Compile Include="Security\UserSession.cs" />
     <Compile Include="SimpleExceptionLogger.cs" />
     <Compile Include="SimpleTraceListener.cs" />

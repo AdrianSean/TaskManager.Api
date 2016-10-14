@@ -25,7 +25,8 @@ namespace Web.Api
             config.Services.Replace(typeof(IHttpControllerSelector), new NamespaceHttpControllerSelector(config));
 
             //config.EnableSystemDiagnosticsTracing();
-            config.Services.Replace(typeof(ITraceWriter), new SimpleTraceWriter(WebContainerManager.Get<ILogManager>()));
+            config.Services.Replace(typeof(ITraceWriter), 
+                new SimpleTraceWriter(WebContainerManager.Get<ILogManager>()));
 
             config.Services.Add(typeof(IExceptionLogger), new SimpleExceptionLogger(WebContainerManager.Get<ILogManager>()));
 
