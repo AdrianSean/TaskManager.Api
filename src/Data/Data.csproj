@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Entities\IVersionEntity.cs" />
     <Compile Include="QueryProcessors\IAddTaskQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\ICompleteTaskWorkflowProcessor.cs" />
     <Compile Include="QueryProcessors\IStartTaskWorkflowProcessor.cs" />
     <Compile Include="QueryProcessors\ITaskByIdQueryProcessor.cs" />
     <Compile Include="QueryProcessors\IUpdateTaskStatusQueryProcessor.cs" />
