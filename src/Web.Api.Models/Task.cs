@@ -35,5 +35,18 @@ namespace Web.Api.Models
             Links.Add(link);
         }
 
+
+
+        private bool _shouldSerlizeAssinees;
+        public void SetShouldSerializeAssignees(bool shouldSerialize)
+        {
+            _shouldSerlizeAssinees = shouldSerialize;
+        }
+
+        public bool ShouldSerializeAssignees()
+        {
+            return _shouldSerlizeAssinees;
+        }
+
     }
 }

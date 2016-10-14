@@ -1,4 +1,5 @@
-﻿using Common.TypeMapping;
+﻿using Common.Security;
+using Common.TypeMapping;
 using System.Web.Http;
 using Web.Api.Security;
 using Web.Common;
@@ -21,8 +22,13 @@ namespace Web.Api
         private void RegisterHandlers()
         {
             var logManager = WebContainerManager.Get<ILogManager>();
+            var userSession = WebContainerManager.Get<IUserSession>();
+
             GlobalConfiguration.Configuration.MessageHandlers.Add(
                 new BasicAuthenticationMessageHandler(logManager, WebContainerManager.Get<IBasicSecurityService>()));
+
+            GlobalConfiguration.Configuration.MessageHandlers.Add(
+                new TaskDataSecurityMessageHandler(logManager, userSession));
         }
 
         protected void Application_Error()
