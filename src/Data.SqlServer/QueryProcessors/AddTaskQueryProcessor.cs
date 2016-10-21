@@ -27,8 +27,8 @@ namespace Data.SqlServer.QueryProcessors
             task.Status = _session.QueryOver<Status>().Where(
                 x => x.Name == "Not Started").SingleOrDefault();
 
-            task.CreatedBy = _session.Get<User>(1L); //_session.QueryOver<User>().Where(
-                //X => X.Username == _userSession.Username).SingleOrDefault();
+            task.CreatedBy = _session.QueryOver<User>()
+                .Where(X => X.Username == _userSession.Username).SingleOrDefault();
 
             if (task.Users != null && task.Users.Any())
             {

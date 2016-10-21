@@ -57,10 +57,8 @@
     <Compile Include="Mapping\VersionClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryProcessors\AddTaskQueryProcessor.cs" />
-    <Compile Include="QueryProcessors\CompleteTaskWorkflowProcessor.cs" />
-    <Compile Include="QueryProcessors\ReactivateTaskWorkflowProcessor.cs" />
-    <Compile Include="QueryProcessors\StartTaskWorkflowProcessor.cs" />
     <Compile Include="QueryProcessors\TaskByIdQueryProcessor.cs" />
+    <Compile Include="QueryProcessors\UpdateTaskQueryProcessor.cs" />
     <Compile Include="QueryProcessors\UpdateTaskStatusQueryProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,10 +75,6 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{e96a9f3a-3373-4b2b-9e63-851f6c2b7068}</Project>
       <Name>Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Web.Api.Models\Web.Api.Models.csproj">
-      <Project>{DD6C0C20-A029-4087-BD7B-1E710759EF0E}</Project>
-      <Name>Web.Api.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Web.Common\Web.Common.csproj">
       <Project>{8EC6F83E-2810-4439-8543-E99AE9F857AD}</Project>

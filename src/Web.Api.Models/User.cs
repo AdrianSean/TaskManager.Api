@@ -6,7 +6,7 @@ namespace Web.Api.Models
     {
         private List<Link> _links;
 
-        public long Username { get; set; }
+        public string Username { get; set; }
 
         public string Firstname { get; set; }
 

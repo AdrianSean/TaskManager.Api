@@ -1,11 +1,10 @@
 ﻿using Common.TypeMapping;
 using Data.Exceptions;
 using Data.QueryProcessors;
-using System;
 using Web.Api.Models;
 using Web.Common;
 
-namespace Data.SqlServer.QueryProcessors
+namespace Web.Api.MaintenanceProcessing
 {
     public class ReactivateTaskWorkflowProcessor : IReactivateTaskWorkflowProcessor
     {

@@ -2,7 +2,6 @@
 using Common.TypeMapping;
 using Data.Entities;
 
-
 namespace Web.Api.AutoMappingConfiguration
 {
     public class UserEntityToUserAutoMapperTypeConfigurator : IAutoMapperTypeConfigurator

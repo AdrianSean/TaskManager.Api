@@ -37,15 +37,15 @@ namespace Web.Api.Models
 
 
 
-        private bool _shouldSerlizeAssinees;
+        private bool _shouldSerlizeAssignees;
         public void SetShouldSerializeAssignees(bool shouldSerialize)
         {
-            _shouldSerlizeAssinees = shouldSerialize;
+            _shouldSerlizeAssignees = shouldSerialize;
         }
 
         public bool ShouldSerializeAssignees()
         {
-            return _shouldSerlizeAssinees;
+            return _shouldSerlizeAssignees;
         }
 
     }

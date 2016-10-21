@@ -1,7 +1,7 @@
 ﻿using Web.Api.Models;
 
-namespace Data.QueryProcessors
-{
+namespace Web.Api.MaintenanceProcessing
+{ 
     public interface IReactivateTaskWorkflowProcessor
     {
         Task ReactivateTask(long taskId);
