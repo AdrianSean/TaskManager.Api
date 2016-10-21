@@ -8,8 +8,8 @@ using Web.Common.Routing;
 
 namespace Web.Api.Controllers.V1
 {
-    [ApiVersion1RoutePrefix("tasks")]
-    [UnitOfWorkActionFilter]
+    [ApiVersion1RoutePrefix("tasks")]    
+    [UnitOfWorkActionFilter]    
     [Authorize(Roles =Constants.RoleNames.JuniorWorker)]
     public class TasksController : ApiController
     {
@@ -28,6 +28,7 @@ namespace Web.Api.Controllers.V1
 
         [Route("", Name ="AddTaskRoute")]
         [HttpPost]
+        [ValidateModel]
         [Authorize(Roles = Constants.RoleNames.Manager)]
         public Task AddTask(HttpRequestMessage requestMessage, NewTask newTask)
         {
@@ -46,6 +47,7 @@ namespace Web.Api.Controllers.V1
         [Route("{id:long}", Name = "UpdateTaskRoute")]
         [HttpPut]
         [HttpPatch]
+        [ValidateTaskUpdateRequest]
         [Authorize(Roles =Constants.RoleNames.SeniorWorker)]
         public Task UpdateTask(long id, [FromBody] object updatedTask)
         {

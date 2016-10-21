@@ -109,6 +109,7 @@
     <Compile Include="SimpleExceptionLogger.cs" />
     <Compile Include="SimpleTraceListener.cs" />
     <Compile Include="UnitOfWorkActionFilterAttribute.cs" />
+    <Compile Include="ValidateModelAttribute.cs" />
     <Compile Include="WebContainerManager.cs" />
   </ItemGroup>
   <ItemGroup>

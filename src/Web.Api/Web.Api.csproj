@@ -224,6 +224,7 @@
     <Compile Include="MaintenanceProcessing\StartTaskWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\TaskUsersMaintenanceProcessor.cs" />
     <Compile Include="MaintenanceProcessing\UpdateTaskMaintenanceProcessor.cs" />
+    <Compile Include="MaintenanceProcessing\ValidateTaskUpdateRequestAttribute.cs" />
     <Compile Include="Security\BasicAuthenticationMessageHandler.cs" />
     <Compile Include="Controllers\V1\TasksController.cs" />
     <Compile Include="Controllers\V2\TasksController.cs" />
