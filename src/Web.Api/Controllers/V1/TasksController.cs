@@ -15,12 +15,15 @@ namespace Web.Api.Controllers.V1
     {
         private readonly IAddTaskMaintenanceProcessor _addTaskMaintenanceProcessor;
         private readonly ITaskByIdInquiryProcessor _taskByIdInQuiryProcessor;
+        private readonly IUpdateTaskMaintenanceProcessor _updateTaskMaintenanceProcessor;
 
         public TasksController(IAddTaskMaintenanceProcessor addTaskMaintenanceProcessor,
-                               ITaskByIdInquiryProcessor taskByIdInQuiryProcessor)
+                               ITaskByIdInquiryProcessor taskByIdInQuiryProcessor,
+                                IUpdateTaskMaintenanceProcessor updateTaskMaintenanceProcessor)
         {
             _addTaskMaintenanceProcessor = addTaskMaintenanceProcessor;
             _taskByIdInQuiryProcessor = taskByIdInQuiryProcessor;
+            _updateTaskMaintenanceProcessor = updateTaskMaintenanceProcessor;
         }
 
         [Route("", Name ="AddTaskRoute")]
@@ -38,6 +41,16 @@ namespace Web.Api.Controllers.V1
         {
             var task = _taskByIdInQuiryProcessor.GetTask(id);
             return task;           
-        }              
+        }
+
+        [Route("{id:long}", Name = "UpdateTaskRoute")]
+        [HttpPut]
+        [HttpPatch]
+        [Authorize(Roles =Constants.RoleNames.SeniorWorker)]
+        public Task UpdateTask(long id, [FromBody] object updatedTask)
+        {
+            var task = _updateTaskMaintenanceProcessor.UpdateTask(id, updatedTask);
+            return task;
+        }
     }
 }

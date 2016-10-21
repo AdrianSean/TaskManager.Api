@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using Data.Entities;
 using System.Linq;
+using PropertyValueMapType = System.Collections.Generic.Dictionary<string, object>;
 
 namespace Data.SqlServer.QueryProcessors
 {
@@ -100,6 +101,21 @@ namespace Data.SqlServer.QueryProcessors
                 throw new ChildObjectNotFoundException("User not found");
 
             return user;
+        }
+
+        public Task GetUpdatedTask(long taskId, PropertyValueMapType updatedPropertyValueMap)
+        {
+            var task = GetValidTask(taskId);
+
+            var propertyInfos = typeof(Task).GetProperties();
+
+            foreach (var propertyValuePair in updatedPropertyValueMap)
+                propertyInfos.Single(x => x.Name == propertyValuePair.Key)
+                    .SetValue(task, propertyValuePair.Value);
+
+            _session.SaveOrUpdate(task);
+
+            return task;
         }
     }
 }
