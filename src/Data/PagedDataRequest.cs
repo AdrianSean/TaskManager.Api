@@ -1,0 +1,15 @@
+﻿namespace Data
+{
+    public class PagedDataRequest
+    {
+        public PagedDataRequest(int pageNumber, int pageSize)
+        {
+            PageNumber = pageNumber;
+            PageSize = pageSize;
+        }
+
+        public int PageNumber { get; private set; }
+        public int PageSize { get; private set; }
+        public bool ExcludedLinks { get; set; }
+    }
+}

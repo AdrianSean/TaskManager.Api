@@ -23,6 +23,7 @@ using Data.SqlServer.QueryProcessors;
 using Web.Api.Security;
 using Data.QueryProcessors;
 using Web.Api.InquiryProcessing;
+using Data.Entities;
 
 namespace Web.Api
 {
@@ -39,6 +40,7 @@ namespace Web.Api
             ConfigureUserSession(container);
             ConfigureNHibernate(container);
             ConfigureAutoMapper(container);
+
             container.Bind<IDateTime>().To<DateTimeAdapter>().InSingletonScope();
             container.Bind<IAddTaskQueryProcessor>().To<AddTaskQueryProcessor>().InRequestScope();
             container.Bind<IAddTaskMaintenanceProcessor>().To<AddTaskMaintenanceProcessor>().InRequestScope();
@@ -53,6 +55,10 @@ namespace Web.Api
             container.Bind<ITaskUsersMaintenanceProcessor>().To<TaskUsersMaintenanceProcessor>().InRequestScope();
             container.Bind<IUpdateablePropertyDetector>().To<JObjectUpdateablePropertyDetector>().InSingletonScope();
             container.Bind<IUpdateTaskMaintenanceProcessor>().To<UpdateTaskMaintenanceProcessor>().InRequestScope();
+            container.Bind<IPagedDataRequestFactory>().To<PagedDataRequestFactory>().InSingletonScope();
+            container.Bind<IAllTasksQueryProcessor>().To<AllTasksQueryProcessor>().InRequestScope();
+            container.Bind<IAllTasksInquiryProcessor>().To<AllTasksInquiryProcessor>().InRequestScope();
+
         }
 
 

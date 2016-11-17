@@ -1,7 +1,6 @@
-﻿
-namespace Web.Common
+﻿namespace Common
 {
-    public class Constants
+    public static class Constants
     {
         public static class MediaTypeNames
         {

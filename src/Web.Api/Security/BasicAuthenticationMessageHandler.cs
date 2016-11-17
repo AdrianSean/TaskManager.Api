@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using Common;
+using log4net;
 using System;
 using System.Net.Http;
 using System.Net.Http.Headers;

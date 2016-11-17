@@ -1,4 +1,5 @@
-﻿using Common.TypeMapping;
+﻿using Common;
+using Common.TypeMapping;
 using Data.Entities.QueryProcessors;
 using System;
 using System.Net.Http;

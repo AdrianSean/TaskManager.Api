@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using Common;
+using System.Net.Http;
 using System.Web.Http;
 using Web.Api.InquiryProcessing;
 using Web.Api.MaintenanceProcessing;
@@ -16,15 +17,24 @@ namespace Web.Api.Controllers.V1
         private readonly IAddTaskMaintenanceProcessor _addTaskMaintenanceProcessor;
         private readonly ITaskByIdInquiryProcessor _taskByIdInQuiryProcessor;
         private readonly IUpdateTaskMaintenanceProcessor _updateTaskMaintenanceProcessor;
+        private readonly IPagedDataRequestFactory _pagedDataRequestFactory;
+        private readonly IAllTasksInquiryProcessor _allTasksInquiryProcessor;
+
 
         public TasksController(IAddTaskMaintenanceProcessor addTaskMaintenanceProcessor,
                                ITaskByIdInquiryProcessor taskByIdInQuiryProcessor,
-                                IUpdateTaskMaintenanceProcessor updateTaskMaintenanceProcessor)
+                                IUpdateTaskMaintenanceProcessor updateTaskMaintenanceProcessor,
+                                IPagedDataRequestFactory pagedDataRequestFactory,
+                                IAllTasksInquiryProcessor allTasksInquiryProcessor)
         {
             _addTaskMaintenanceProcessor = addTaskMaintenanceProcessor;
             _taskByIdInQuiryProcessor = taskByIdInQuiryProcessor;
             _updateTaskMaintenanceProcessor = updateTaskMaintenanceProcessor;
+            _pagedDataRequestFactory = pagedDataRequestFactory;
+            _allTasksInquiryProcessor = allTasksInquiryProcessor;
         }
+
+
 
         [Route("", Name ="AddTaskRoute")]
         [HttpPost]
@@ -37,12 +47,27 @@ namespace Web.Api.Controllers.V1
             return task;
         }
 
+
+
+
         [Route("{id:long}", Name ="GetTaskRoute")]       
         public Task GetTask(long id)
         {
             var task = _taskByIdInQuiryProcessor.GetTask(id);
             return task;           
         }
+
+
+        [Route("", Name = "GetTasksRoute")]
+        public PagedDataInquiryResponse<Task> GetTasks(HttpRequestMessage requestMessage)
+        {
+            var request = _pagedDataRequestFactory.Create(requestMessage.RequestUri);
+            var tasks = _allTasksInquiryProcessor.GetTasks(request);
+            return tasks;
+        }
+
+
+
 
         [Route("{id:long}", Name = "UpdateTaskRoute")]
         [HttpPut]
