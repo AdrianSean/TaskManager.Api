@@ -218,6 +218,8 @@
     <Compile Include="InquiryProcessing\ITaskByIdInquiryProcessor.cs" />
     <Compile Include="InquiryProcessing\PagedDataRequestFactory.cs" />
     <Compile Include="InquiryProcessing\TaskByIdInquiryProcessor.cs" />
+    <Compile Include="LinkedServices\CommonLinkService.cs" />
+    <Compile Include="LinkedServices\ICommonLinkedServices.cs" />
     <Compile Include="MaintenanceProcessing\CompleteTaskWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\ICompleteTaskWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\IReactivateTaskWorkflowProcessor.cs" />

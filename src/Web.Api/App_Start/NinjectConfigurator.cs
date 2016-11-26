@@ -24,6 +24,7 @@ using Web.Api.Security;
 using Data.QueryProcessors;
 using Web.Api.InquiryProcessing;
 using Data.Entities;
+using Web.Api.LinkedServices;
 
 namespace Web.Api
 {
@@ -58,7 +59,7 @@ namespace Web.Api
             container.Bind<IPagedDataRequestFactory>().To<PagedDataRequestFactory>().InSingletonScope();
             container.Bind<IAllTasksQueryProcessor>().To<AllTasksQueryProcessor>().InRequestScope();
             container.Bind<IAllTasksInquiryProcessor>().To<AllTasksInquiryProcessor>().InRequestScope();
-
+            container.Bind<ICommonLinkService>().To<CommonLinkService>().InRequestScope();
         }
 
 

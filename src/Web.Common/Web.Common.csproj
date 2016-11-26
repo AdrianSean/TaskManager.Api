@@ -92,6 +92,7 @@
     <Compile Include="ErrorHandling\GlobalExceptionHandler.cs" />
     <Compile Include="ErrorHandling\SimpleErrorResult.cs" />
     <Compile Include="Extensions\IntExtensions.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="IActionTransactionHelper.cs" />
     <Compile Include="IDateTime.cs" />
     <Compile Include="IUpdateablePropertyDetector.cs" />
