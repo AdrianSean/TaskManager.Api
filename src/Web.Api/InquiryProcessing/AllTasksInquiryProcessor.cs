@@ -1,11 +1,10 @@
 ﻿using Common.TypeMapping;
 using Data;
-
 using Data.Entities;
-using System;
+
 using System.Collections.Generic;
 using System.Linq;
-
+using Web.Api.LinkedServices;
 using PagedTaskDataInquiryResponse =
 Web.Api.Models.PagedDataInquiryResponse<Web.Api.Models.Task>;
 
@@ -15,13 +14,21 @@ namespace Web.Api.InquiryProcessing
     public class AllTasksInquiryProcessor : IAllTasksInquiryProcessor
     {
         private readonly IAutoMapper _autoMapper;
+        private readonly ICommonLinkService _commonLinkService;
+        private readonly ITaskLinkService _taskLinkService;
         private readonly IAllTasksQueryProcessor _queryProcessor;
 
+        public const string QueryStringFormat = "pagenumber={0}&pagesize={1}";
 
-        public AllTasksInquiryProcessor(IAutoMapper autoMapper, IAllTasksQueryProcessor queryProcessor)
+
+        public AllTasksInquiryProcessor(IAutoMapper autoMapper, IAllTasksQueryProcessor queryProcessor,
+                                        ICommonLinkService commonLinkService,
+                                        ITaskLinkService taskLinkService)
         {
             _autoMapper = autoMapper;
             _queryProcessor = queryProcessor;
+            _commonLinkService = commonLinkService;
+            _taskLinkService = taskLinkService;
         }
 
         
@@ -40,6 +47,8 @@ namespace Web.Api.InquiryProcessing
                 PageSize = requestInfo.PageSize
             };
 
+            AddLinksToInquiryResponse(inquiryResponse);
+
             return inquiryResponse;
         }
 
@@ -48,6 +57,30 @@ namespace Web.Api.InquiryProcessing
         {
             var tasks = taskEntities.Select(x => _autoMapper.Map<Models.Task>(x)).ToList();
             return tasks;
+        }
+
+
+        public virtual void AddLinksToInquiryResponse(PagedTaskDataInquiryResponse inquiryResponse)
+        {
+            inquiryResponse.AddLink(_taskLinkService.GetAllTasksLink());
+            _commonLinkService.AddPageLinks(inquiryResponse, GetCurrentPageQueryString(inquiryResponse), 
+                                                GetPreviousPageQueryString(inquiryResponse),
+                                                    GetNextPageQueryString(inquiryResponse));
+        }
+
+        public virtual string GetCurrentPageQueryString(PagedTaskDataInquiryResponse inquiryResponse)
+        {
+            return string.Format(QueryStringFormat, inquiryResponse.PageNumber, inquiryResponse.PageSize);
+        }
+
+        public virtual string GetPreviousPageQueryString(PagedTaskDataInquiryResponse inquiryResponse)
+        {
+            return string.Format(QueryStringFormat, inquiryResponse.PageNumber - 1, inquiryResponse.PageSize);
+        }
+
+        public virtual string GetNextPageQueryString(PagedTaskDataInquiryResponse inquiryResponse)
+        {
+            return string.Format(QueryStringFormat, inquiryResponse.PageNumber + 1, inquiryResponse.PageSize);
         }
     }
 }
