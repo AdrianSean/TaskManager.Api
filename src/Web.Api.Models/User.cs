@@ -4,7 +4,11 @@ namespace Web.Api.Models
 {
     public class User
     {
+
+
         private List<Link> _links;
+
+        public long UserId { get; set; }
 
         public string Username { get; set; }
 

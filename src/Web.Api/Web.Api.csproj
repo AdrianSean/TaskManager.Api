@@ -220,6 +220,10 @@
     <Compile Include="InquiryProcessing\TaskByIdInquiryProcessor.cs" />
     <Compile Include="LinkedServices\CommonLinkService.cs" />
     <Compile Include="LinkedServices\ICommonLinkedServices.cs" />
+    <Compile Include="LinkedServices\ITaskLinkService.cs" />
+    <Compile Include="LinkedServices\IUserLinkService.cs" />
+    <Compile Include="LinkedServices\TaskLinkService.cs" />
+    <Compile Include="LinkedServices\UserLinkService.cs" />
     <Compile Include="MaintenanceProcessing\CompleteTaskWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\ICompleteTaskWorkflowProcessor.cs" />
     <Compile Include="MaintenanceProcessing\IReactivateTaskWorkflowProcessor.cs" />
