@@ -21,17 +21,13 @@ namespace Web.Api.Controllers.V1
         private readonly IAllTasksInquiryProcessor _allTasksInquiryProcessor;
 
 
-        public TasksController(IAddTaskMaintenanceProcessor addTaskMaintenanceProcessor,
-                               ITaskByIdInquiryProcessor taskByIdInQuiryProcessor,
-                                IUpdateTaskMaintenanceProcessor updateTaskMaintenanceProcessor,
-                                IPagedDataRequestFactory pagedDataRequestFactory,
-                                IAllTasksInquiryProcessor allTasksInquiryProcessor)
+        public TasksController(ITasksControllerDependencyBlock tasksControllerDependencyBlock)
         {
-            _addTaskMaintenanceProcessor = addTaskMaintenanceProcessor;
-            _taskByIdInQuiryProcessor = taskByIdInQuiryProcessor;
-            _updateTaskMaintenanceProcessor = updateTaskMaintenanceProcessor;
-            _pagedDataRequestFactory = pagedDataRequestFactory;
-            _allTasksInquiryProcessor = allTasksInquiryProcessor;
+            _addTaskMaintenanceProcessor = tasksControllerDependencyBlock.AddTaskMaintenanceProcessor;
+            _taskByIdInQuiryProcessor = tasksControllerDependencyBlock.TaskByIdInquiryProcessor;
+            _updateTaskMaintenanceProcessor = tasksControllerDependencyBlock.UpdateTaskMaintenanceProcessor;
+            _pagedDataRequestFactory = tasksControllerDependencyBlock.PagedDataRequestFactory;
+            _allTasksInquiryProcessor = tasksControllerDependencyBlock.AllTasksInquiryProcessor;
         }
 
 

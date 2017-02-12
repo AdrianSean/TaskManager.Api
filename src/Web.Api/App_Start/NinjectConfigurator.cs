@@ -25,6 +25,7 @@ using Data.QueryProcessors;
 using Web.Api.InquiryProcessing;
 using Data.Entities;
 using Web.Api.LinkedServices;
+using Web.Api.Controllers.V1;
 
 namespace Web.Api
 {
@@ -62,6 +63,7 @@ namespace Web.Api
             container.Bind<ICommonLinkService>().To<CommonLinkService>().InRequestScope();
             container.Bind<IUserLinkService>().To<UserLinkService>().InRequestScope();
             container.Bind<ITaskLinkService>().To<TaskLinkService>().InRequestScope();
+            container.Bind<ITasksControllerDependencyBlock>().To<TasksControllerDependencyBlock>().InRequestScope();
         }
 
 
