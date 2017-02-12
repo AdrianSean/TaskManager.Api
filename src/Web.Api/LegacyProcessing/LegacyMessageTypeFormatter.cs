@@ -54,8 +54,7 @@ namespace Web.Api.LegacyProcessing
             var namespaceName = operationElementName.NamespaceName;
             var operationName = operationElementName.LocalName;
 
-            var operationResultInnerElement = new XElement(
-                string.Concat("{", namespaceName, "}", operationName, "Result"));
+            var operationResultInnerElement = new XElement(string.Concat("{", namespaceName, "}", operationName, "Result"));
 
             var processResult = legacyResponse.ProcessingResult;
             if (processResult != null)
@@ -63,8 +62,8 @@ namespace Web.Api.LegacyProcessing
                 operationResultInnerElement.Add(processResult);
             }
 
-            var operationResultOuterElement = new XElement(
-                string.Concat("{", namespaceName, "}", operationName, "Response"));
+            var operationResultOuterElement = new XElement(string.Concat("{", namespaceName, "}", operationName, "Response"));
+
             operationResultOuterElement.Add(operationResultInnerElement);
 
             operationElement.ReplaceWith(operationResultOuterElement);

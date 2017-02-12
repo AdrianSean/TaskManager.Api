@@ -1,7 +1,9 @@
 ﻿using Common.Security;
 using Common.TypeMapping;
 using JwtAuthForWebAPI;
+using System.Net.Http.Formatting;
 using System.Web.Http;
+using Web.Api.LegacyProcessing;
 using Web.Api.Security;
 using Web.Common;
 using Web.Common.Logging;
@@ -11,12 +13,20 @@ namespace Web.Api
     public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
-        {            
+        {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+
+            ConfigureFormatters();
+
             RegisterHandlers();
+
             new AutoMapperConfigurator().Configure(WebContainerManager.GetAll<IAutoMapperTypeConfigurator>());
+        }
 
-
+        private void ConfigureFormatters()
+        {
+            var legacyFormatter = (MediaTypeFormatter)WebContainerManager.Get<ILegacyMessageTypeFormatter>();
+            GlobalConfiguration.Configuration.Formatters.Insert(0, legacyFormatter);
         }
 
 
