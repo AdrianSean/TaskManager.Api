@@ -18,8 +18,7 @@ namespace Web.Api.LegacyProcessing
             get { return WebContainerManager.Get<ILegacyMessageProcessor>(); }
         }
 
-        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
-            CancellationToken cancellationToken)
+        protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             var requestContentAsString = request.Content.ReadAsStringAsync().Result;
             var requestContentAsDocument = XDocument.Parse(requestContentAsString);
